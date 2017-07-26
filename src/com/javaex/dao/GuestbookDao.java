@@ -77,13 +77,13 @@ public class GuestbookDao {
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 			// 3. SQL문 준비 / 바인딩 / 실행
-			String query = "insert into guestbook1 values(seq_emaillist_no.nextval,?,?,?,?)";
+			String query = "insert into guestbook1 values(seq_emaillist_no.nextval,?,?,?,sysdate)";
 			pstmt = conn.prepareStatement(query);
 
 			pstmt.setString(1, vo.getName());
 			pstmt.setString(2, vo.getPassword());
 			pstmt.setString(3, vo.getContent());
-			pstmt.setString(4, vo.getRegDate());
+		
 
 			count = pstmt.executeUpdate();
 
