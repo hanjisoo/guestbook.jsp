@@ -3,17 +3,17 @@
 <%@ page import="com.javaex.vo.GuestbookVo" %>
 <%@ page import="java.util.List" %>
 
-<%
+<%-- <%
 	//리스트주소 줄꺼야
 	GuestbookDao dao=new GuestbookDao();
 	List<GuestbookVo> list=dao.getList();
 	System.out.println(list.toString());
-
+	뿌려줄꺼야
 	response.sendRedirect("list.jsp");
-%>
+%> --%>
 
 <%
-	//리스트에서 받아올꺼야
+	//리스트에서 받아올꺼야-저장
 	request.setCharacterEncoding("UTF-8");
 	String name=request.getParameter("name");
 	String password=request.getParameter("pass");
@@ -23,5 +23,8 @@
 	
 	GuestbookDao bookdao =new GuestbookDao();
 	bookdao.insert(vo);
+	
+	response.sendRedirect("list.jsp");
+	
 	System.out.println(name+password+content);
 %>

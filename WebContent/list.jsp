@@ -48,7 +48,7 @@
 				<td><%=vo.getName() %></td>
 				<td><%=vo.getRegDate() %></td>
 				<td><a href="deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
-			</tr>               <!-- 삭제누르면 해당 번호가 삭제되야하고 그 번호 페이지로 연결되야지 -->
+			</tr>               <!-- 삭제누르면 해당 번호의 삭제 페이지로 연결되야지 -->
 			<tr>
 				<td colspan=4>안녕하세요<br/><%=vo.getContent() %></td>
 			</tr>
